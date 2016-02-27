@@ -9,6 +9,20 @@ body {
   padding-top: 20px;
 }
 
+.social-login {
+  text-align: center;
+}
+
+.facebook {
+  color: #3b5998;
+}
+.google {
+  color: #dc4e41;
+}
+.twitter {
+  color: #55acee;
+}
+
 .container {
     width: 80%;
 }
