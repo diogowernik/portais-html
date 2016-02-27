@@ -3,6 +3,12 @@ body {
   background-color: #F8F8F8;
 }
 
+.criar-conta {
+  background-color: #FFFFFF;
+  padding-bottom: 100px;
+  padding-top: 20px;
+}
+
 .container {
     width: 80%;
 }
@@ -17,7 +23,18 @@ body {
   font-weight: 400;
 }
 
-.btn-primary.btn {
+.nav-pills > li > a, .nav-pills > li > a:hover {
+    border-radius: 1px;
+    color:  #ff5a5f;
+}
+.jumbotron {
+    margin: 0px;
+    font-size: 21px;
+    font-weight: 200;
+    background-color: #F8F8F8;
+}
+
+.btn-primary.btn, .nav-pills > li.active > a, .nav-pills > li.active > a:focus {
   border: 1px solid #ff5a5f;
   border-radius: 2px;
   font-weight: bold;
@@ -26,7 +43,7 @@ body {
   padding: 10px 25px 10px 25px;
 }
 
-.btn-primary.btn:hover, .btn-primary.btn:focus {
+.btn-primary.btn:hover, .btn-primary.btn:focus, .nav-pills > li.active > a:hover {
   border-color: #ff7e82;
   border-bottom-color: #fa0008;
   background-color: #ff7e82;  
