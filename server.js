@@ -1,65 +1,48 @@
-var fs = require('fs');
+// Require Modules
+var http = require('http');
+var url = require('url');
 var path = require('path');
-var express = require('express');
-var bodyParser = require('body-parser');
-var app = express();
+var fs = require('fs');
 
-var COMMENTS_FILE = path.join(__dirname, 'comments.json');
+// Mime Type Object
+var mimeTypes = {
+	"html" : "text/html",
+	"jpeg" : "image/jpeg",
+	"jpg"  : "image/jpeg",
+	"png"  : "image/png",
+	"js"   : "text/javascript",
+	"css"  : "text/css"
+};
 
-app.set('port', (process.env.PORT || 3000));
+// Create Server
+http.createServer(function(req, res){
+	var uri = url.parse(req.url).pathname;
+	var fileName = path.join(process.cwd(), unescape(uri));
+	console.log('Loading '+ uri);
+	var stats;
 
-app.use('/', express.static(path.join(__dirname, 'public')));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
+	try{
+		stats = fs.lstatSync(fileName);
+	} catch(e){
+		res.writeHead(404, {'Content-type': 'text/plain'});
+		res.write('404 Not Found\n');
+		res.end();
+		return;
+	}
 
-// Additional middleware which will set headers that we need on each request.
-app.use(function(req, res, next) {
-    // Set permissive CORS header - this allows this server to be used only as
-    // an API server in conjunction with something like webpack-dev-server.
-    res.setHeader('Access-Control-Allow-Origin', '*');
+	// Check If file / Directory
+	if(stats.isFile()){
+		var mimeType = mimeTypes[path.extname(fileName).split(".").reverse()[0]];
+		res.writeHead(200, {'Content-type': mimeType});
 
-    // Disable caching so we'll always get the latest comments.
-    res.setHeader('Cache-Control', 'no-cache');
-    next();
-});
-
-app.get('/api/comments', function(req, res) {
-  fs.readFile(COMMENTS_FILE, function(err, data) {
-    if (err) {
-      console.error(err);
-      process.exit(1);
-    }
-    res.json(JSON.parse(data));
-  });
-});
-
-app.post('/api/comments', function(req, res) {
-  fs.readFile(COMMENTS_FILE, function(err, data) {
-    if (err) {
-      console.error(err);
-      process.exit(1);
-    }
-    var comments = JSON.parse(data);
-    // NOTE: In a real implementation, we would likely rely on a database or
-    // some other approach (e.g. UUIDs) to ensure a globally unique id. We'll
-    // treat Date.now() as unique-enough for our purposes.
-    var newComment = {
-      id: Date.now(),
-      author: req.body.author,
-      text: req.body.text,
-    };
-    comments.push(newComment);
-    fs.writeFile(COMMENTS_FILE, JSON.stringify(comments, null, 4), function(err) {
-      if (err) {
-        console.error(err);
-        process.exit(1);
-      }
-      res.json(comments);
-    });
-  });
-});
-
-
-app.listen(app.get('port'), function() {
-  console.log('Server started: http://react.brasilia.io');
-});
+		var fileStream = fs.createReadStream(fileName);
+		fileStream.pipe(res);
+	} else if(stats.isDirectory()){
+		res.writeHead(302, {'Location': 'index.html'});
+		res.end();
+	} else {
+		res.writeHead(500, {'Content-type': 'text/plain'});
+		res.write('500 Internal Error\n');
+		res.end();
+	}
+}).listen(1234);

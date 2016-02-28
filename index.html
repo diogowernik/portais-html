@@ -6,8 +6,8 @@
 	<meta name=viewport content="width=device-width, initial-scale=1">
 	<title>brasilia.io</title>
 
-	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css" />
-	<link rel="stylesheet" type="text/css" href="/css/estilo.css" />
+	<link rel="stylesheet" type="text/css" href="vendors/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="/css/pagina-inicial.css" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 
@@ -54,15 +54,16 @@
 					<div id="criarConta" class="tab-pane fade in active">
 						<h3>Criar Conta</h3>
 						</br>
-						<form class="form-inline" id="new_user" action="/" accept-charset="UTF-8" method="post">
+							
+						<form id="form" class="form-inline" id="new_user" action="/api/auth" accept-charset="UTF-8" method="post">
 							<div class="form-group">
-								<input class="form-control" placeholder="Email" type="email" value="" name="user[email]" id="user_email" />
+								<input class="form-control" placeholder="Email" type="email" value="" name="email" id="user_email" />
 							</div>
 							<div class="form-group">
-								<input class="form-control" placeholder="Senha" autocomplete="off" type="password" name="user[password]" id="user_password" />
+								<input class="form-control" placeholder="Senha" autocomplete="off" type="password" name="password" id="user_password" />
 							</div>
 							<div class="form-group">
-								<input type="submit" name="commit" value="Criar Conta" class="btn btn-primary" />
+								<input type="submit" value="Submit" class="btn btn-primary">
 							</div>
 						</form>
 					</div>
@@ -72,13 +73,13 @@
 						</br>
 						<form class="form-inline" id="new_user" action="/" accept-charset="UTF-8" method="post">
 							<div class="form-group">
-								<input class="form-control" placeholder="Email" type="email" value="" name="user[email]" id="user_email" />
+								<input class="form-control" placeholder="Email" type="email" value="" name="email" id="user_email" />
 							</div>
 							<div class="form-group">
-								<input class="form-control" placeholder="Senha" autocomplete="off" type="password" name="user[password]" id="user_password" />
+								<input class="form-control" placeholder="Senha" autocomplete="off" type="password" name="password" id="user_password" />
 							</div>
 							<div class="form-group">
-								<input type="submit" name="commit" value="Login" class="btn btn-primary" />
+								<input type="submit" id="submitButton"  name="submitButton" value="Submit" class="btn btn-primary">
 							</div>
 						</form>
 					</div>
@@ -94,13 +95,7 @@
 	</div>
 	</section>
 	
-	<script src="/scripts/jquery.js"></script>
-	<script src="/scripts/bootstrap.js"></script>
-
-
-	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react-dom.js"></script>-->
-	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser.js"></script>-->
-	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>-->
-	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.min.js"></script>-->
+	<script src="/vendors/js/jquery.js"></script>
+	<script src="/vendors/js/bootstrap.js"></script>
 </body>
 </html>
