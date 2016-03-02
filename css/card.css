@@ -1,0 +1,40 @@
+.mural{
+    margin-left:3px;
+}
+.mural h3 {
+	margin-left:13px;
+	margin-top: 0px;
+}
+.card {
+	margin: 10px;
+  	padding: 16px;
+	line-height: 1.5;
+	position: relative;
+	word-wrap: break-word;
+	font-family: "Lucida Grande", "Helvetica", "Arial", sans-serif;
+	background: #FFFFFF;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.1);
+	width: 280px;
+	height: 165px;
+}
+
+
+.card-name {
+    float:right;
+}
+
+@media (min-width: 560px){
+
+.card {
+		flex-grow: 1;
+		display: inline-block;
+		text-align: left;
+		box-sizing: border-box;
+		vertical-align: top;
+		
+		
+	}
+
+
+}
+

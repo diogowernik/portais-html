@@ -117,11 +117,11 @@ select.input-sm {
 }
 
 .avatar-medium {
-    width: 48px;
+    width: 58px;
 }
 
 .avatar-large {
-    width: 68px;
+    width: 88px;
 }
 
 .avatar-full {
@@ -163,4 +163,23 @@ select.input-sm {
   color: #565a5c;
   font-weight: bold;
   text-decoration: none;
+}
+
+#sidebar {
+  background: #FFFFFF;
+  padding: 16px;
+}
+
+.card.new-card {
+    color: #CECECE;
+    text-align: center;
+    padding: 31px;
+    font-size: 18px;
+}
+
+.dashboard-options {
+    margin: 25px;
+    border-top: 1px solid #CDCDCD;
+    padding-top: 25px;
+    
 }

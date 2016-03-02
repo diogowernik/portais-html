@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	
+	<meta charset="utf-8">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title>brasilia.io</title>
+	
+
+	<link rel="stylesheet" type="text/css" href="/vendors/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="/vendors/css/bootstrap-editable.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" type="text/css" href="/css/pagina-inicial.css" />
+	
+	
+  <script src="/vendors/js/jquery-1.12.1.js"></script>
+  <script src="/vendors/js/bootstrap.js"></script>
+  <script src="/vendors/js/bootstrap-editable.js"></script>
+  
+  
+  <!--select2-->
+  
+  <link href="vendors/src/inputs/select2/lib/select2-bootstrap.css" rel="stylesheet" type="text/css"></link>  
+  <link href="vendors/src/inputs/select2/lib/select2.css" rel="stylesheet" type="text/css"></link>  
+  <script src="vendors/src/inputs/select2/lib/select2.js"></script>  
+
+	<!--custom data-->
+	<script src="/js/main.js"></script>
+  
+	
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">ConsultAR</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+
+      <form class="navbar-form navbar-left" action="/search" accept-charset="UTF-8" method="get">
+        <input name="utf8" type="hidden" value="&#x2713;" />
+        <div class="form-group">
+          <input type="text" name="search" id="search" placeholder="CEP?" class="form-control" />
+        </div>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <img class="img-circle avatar-small" src="http://graph.facebook.com/1662846337315473/picture" alt="Picture" />&nbsp; Helton Wernik <span class="caret"></span>
+          </a>
+
+          <ul class="dropdown-menu">
+            <!-- <li><a href="/rooms">Your Listings</a></li> -->
+            <li><a href="/your_reservations">Suas Consultas</a>
+            </li>
+            <li><a href="/your_trips">Consultas Realizadas</a>
+            </li>
+            <!-- <li><a href="#">Wish Lists</a></li> -->
+            <li><a href="/profile">Editar Perfil</a>
+            </li>
+            <li role="separator" class="divider"></li>
+            <!-- <li><a href="#">Account Setting</a></li> -->
+            <li><a rel="nofollow" data-method="delete" href="/logout">Sair</a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="/conversations">
+            <i class="fa fa-envelope-o"></i> Mensagens
+          </a>
+        </li>
+        <li>
+          <a href="/rooms/new">
+            <i class="fa fa-user-md fa-lg"></i> Você é Médico?
+          </a>
+        </li>
+
+      </ul>
+    </div>
+    <!--/.nav-collapse -->
+  </div>
+</nav>
+	
+	<section>
+		<div class="container">
+			
+					<h4>Funcionaram</h4>
+          <p>
+            <a href="#" id="username" data-type="text" data-placement="right" data-title="Digite seu nome">Seu nome</a>
+          </p>
+          
+          <p>
+            
+            <a href="#" id="status"></a>
+          </p>
+          
+
+          <p>
+          	<a href="#" id="firstname" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required" data-title="Enter your firstname"></a>
+          </p>
+          
+          <p>
+          	<a href="#" id="sex" data-type="select" data-pk="1" data-value="" data-title="Select sex"></a>
+          </p>
+          
+          <p>
+          	<a href="#" id="comments" data-type="textarea" data-pk="1" data-placeholder="Your comments here..." data-title="Enter comments">awesome
+user!</a>
+          </p>
+          
+          <p>
+          	<a href="#" id="tags" data-type="select2" data-pk="1" data-title="Enter tags">html, javascript</a>
+          </p>    
+          
+		</div>
+	</section>
+	
+	<section>
+    	<div class="container">
+    		<div class="row">
+    
+    
+    
+    		</div>
+    	</div>
+	</section>
+	
+	
+	
+
+</body>
+</html>
