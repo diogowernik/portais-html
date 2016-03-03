@@ -14,10 +14,12 @@
 	font-family: "Lucida Grande", "Helvetica", "Arial", sans-serif;
 	background: #FFFFFF;
 	box-shadow: 1px 1px 1px rgba(0,0,0,.1);
+}
+
+.card-mural {
 	width: 280px;
 	height: 165px;
 }
-
 
 .card-name {
     float:right;

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title>brasilia.io</title>
+
+	<link rel="stylesheet" type="text/css" href="/vendors/css/bootstrap.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" type="text/css" href="/css/pagina-inicial.css" />
+	<link rel="stylesheet" type="text/css" href="/css/criar-perfil.css" />
+	
+	<script src="/vendors/js/jquery-1.12.1.js"></script>
+	<script src="/vendors/js/bootstrap.js"></script>
+	
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+			    <span class="icon-bar"></span>
+			</button>
+      <div>
+        <a class="navbar-brand" href="#">brasilia.io</a>
+      </div>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <img class="img-circle avatar-small" src="/img/gravatar-example.png" alt="Picture" />&nbsp; Diogo Wernik <span class="caret"></span>
+          </a>
+
+          <ul class="dropdown-menu">
+            <li><a href="#">Painel de Controle</a></a>
+            </li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Seu plano</a></li> 
+            <li><a rel="nofollow" href="#">Sair</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      </div>
+    <!--/.nav-collapse -->
+  </div>
+</nav>
+
+	<div class="container criar-perfil">
+		<h3>Criar Perfil</h3>
+		</br>
+			<form class="form" id="new_profile" action="api/profiles" accept-charset="UTF-8" method="post">
+			    
+				<div class="form-group">
+					<input class="form-control" placeholder="Nome do Perfil" type="string" value="" name="name" id="profile_name" />
+				</div>
+				
+				<div class="form-group">
+                  <textarea class="form-control" placeholder="Escreva um pouco sobre este perfil..." type="string" value="" name="description" id="profile_description"></textarea>
+                </div>
+                
+				<div class="form-group">
+					<input type="submit" value="Criar" class="btn btn-primary">
+				</div>
+				
+			</form>
+	</div>
+
+
+</body>
+</html>

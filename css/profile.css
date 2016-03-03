@@ -1,0 +1,13 @@
+.avatar-profile {
+    margin-top: -30px;
+    margin-left: 50px;
+}
+.linha {
+    margin-top:10px;
+    background: #FFFFFF;
+    height: 30px;
+}
+textarea.form-control.quem-sou-edit {
+    width: 466px;
+    height: 300px;
+}

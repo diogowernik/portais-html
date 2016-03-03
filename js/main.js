@@ -3,7 +3,9 @@ $(document).ready(function() {
     $.fn.editable.defaults.mode = 'inline';     
     
     //make username editable
-    $('#username').editable();
+    $('#username').editable({
+        // showbuttons: false,
+    });
     
     //make status editable
     $('#status').editable({
@@ -50,7 +52,8 @@ $(document).ready(function() {
         }   
     });
     
-    $('#comments').editable({
+    $('#quem-sou').editable({
+        inputclass: 'quem-sou-edit'
         // showbuttons: 'bottom'
     }); 
 
@@ -60,7 +63,7 @@ $(document).ready(function() {
     $('#tags').editable({
         inputclass: 'input-large',
         select2: {
-            tags: ['html', 'javascript', 'css', 'ajax'],
+            tags: ['Hatha Yoga', 'Ashtanga Yoga', 'Kundalini Yoga', 'Yoga Integral'],
             tokenSeparators: [",", " "]
         }
     }); 
