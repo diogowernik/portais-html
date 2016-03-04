@@ -24,6 +24,7 @@
   
   
   <script src="/js/main.js"></script>
+  <script src="/js/busca.js"></script>
 	
 </head>
 
@@ -79,26 +80,100 @@
         </div>
 
         <div class="col-md-9">
+          
           <div class="row mural">
-            <h3>Meus Perfis</h3>
+            <div class="dashboard-h3">
+              <h3>Meus Perfis</h3>  
+            </div>
+            <div class="dashboard-buscar">
+              <input type="search" id="buscar" class="form-control input-md" placeholder="Buscar"/>      
+            </div>
+          </div>
+          
+          <div class="row mural">
+            
+            
             <div class="card card-mural new-card">
-              <p>Novo</p>
-              <p><i class="fa fa-plus-circle fa-3x"></i></p>
+              <a href="profile_create.html">
+                <p>Novo</p>
+                <p><i class="fa fa-plus-circle fa-3x"></i></p>
+              </a>
             </div>
+            
+          
             <div class="card card-mural">
+              
+              <div class="dropdown card-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                  <i class="fa fa-caret-down fa-2x"></i>
+                </a>
+                <ul class="dropdown-menu">
+                  <!--<li><a href="#"><i class="fa fa-eye"></i> Visualisar</a></li>-->
+                  <!--<li role="separator" class="divider"></li>-->
+                  <li><a href="profile_edit.html"><i class="fa fa-pencil text-info"></i> Editar</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#"><i class="fa fa-check text-success"></i> Publicar</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#"><i class="fa fa-trash-o"></i> Arquivar</a></li> 
+                  </li>
+                </ul>
+              </div>
+              
+              
               <img class="img-circle avatar-medium card-image" src="/img/diogo-wernik.jpg" alt="Picture" />
-              <p class="text-center">Diogo Wernik </p>
+              <div class="card-name"><strong>Diogo Wernik</strong></div>
+              <div class="card-linha"><a href="#" id="status"></a></div>
             </div>
             <div class="card card-mural">
+              
+              <div class="dropdown card-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                  <i class="fa fa-caret-down fa-2x text-success"></i>
+                </a>
+                <ul class="dropdown-menu">
+                  <!--<li><a href="#"><i class="fa fa-eye"></i> Visualisar</a></li>-->
+                  <!--<li role="separator" class="divider"></li>-->
+                  <li><a href="#"><i class="fa fa-pencil text-info"></i> Editar</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#"><i class="fa fa-remove text-danger"></i> Despublicar</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#"><i class="fa fa-trash-o"></i> Arquivar</a></li> 
+                  </li>
+                </ul>
+              </div>
+              
               <img class="img-circle avatar-medium card-image" src="/img/estudio-logo.png" alt="Picture" />
-              <p class="text-center">Estudio de Yoga Ganapati </p>
+              <p class="card-name"><strong>Estudio de Yoga Ganapati</strong> </p>
             </div>
             <div class="card card-mural">
               <img class="img-circle avatar-medium card-image" src="/img/estudio-logo2.jpg" alt="Picture" />
-              <p class="text-center">Espaço Swaha </p>
+              <p class="card-name"><strong>Espaço Swaha</strong> </p>
             </div>
           </div>
         </div>
 		</div>
+		
+<footer>
+    <div class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container">
+            <div class="navbar-collapse collapse" id="footer-body">
+                <ul class="nav navbar-nav">
+					<li><a href="index.html">index</a></li>
+					<li><a href="dashboard.html">dashboard</a></li>
+					<li><a href="profile_create.html">profile create</a></li>  	
+					<li><a href="profile_edit.html">profile edit</a></li>  
+                </ul>
+            </div>
+          	<div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#footer-body">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+        </div>
+    </div>
+</footer>
 </body>
 </html>

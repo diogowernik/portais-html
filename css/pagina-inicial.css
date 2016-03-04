@@ -170,16 +170,3 @@ select.input-sm {
   padding: 16px;
 }
 
-.card.new-card {
-    color: #CECECE;
-    text-align: center;
-    padding: 31px;
-    font-size: 18px;
-}
-
-.dashboard-options {
-    margin: 25px;
-    border-top: 1px solid #CDCDCD;
-    padding-top: 25px;
-    
-}

@@ -15,9 +15,10 @@ $(document).ready(function() {
         placement: 'right',
         value: 2,
         source: [
-            {value: 1, text: 'massagem.brasilia.io'},
-            {value: 2, text: 'yoga.brasilia.io'},
-            {value: 3, text: 'sustentavel.brasilia.io'}
+            {value: 1, text: 'Hatha Yoga'},
+            {value: 2, text: 'Ashtanga Yoga'},
+            {value: 3, text: 'Iyengar Yoga'},
+            {value: 4, text: 'Multiplos Estilos'}
         ]
         /*
         //uncomment these lines to send data on server
