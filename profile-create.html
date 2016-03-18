@@ -6,14 +6,14 @@
 	<meta name=viewport content="width=device-width, initial-scale=1">
 	<title>brasilia.io</title>
 
-	<link rel="stylesheet" type="text/css" href="/vendors/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="/html/vendors/css/bootstrap.css" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	
-	<link rel="stylesheet" type="text/css" href="/css/pagina-inicial.css" />
-	<link rel="stylesheet" type="text/css" href="/css/criar-perfil.css" />
+	<link rel="stylesheet" type="text/css" href="/html/css/pagina-inicial.css" />
+	<link rel="stylesheet" type="text/css" href="/html/css/criar-perfil.css" />
 	
-	<script src="/vendors/js/jquery-1.12.1.js"></script>
-	<script src="/vendors/js/bootstrap.js"></script>
+	<script src="/html/vendors/js/jquery-1.12.1.js"></script>
+	<script src="/html/vendors/js/bootstrap.js"></script>
 	
 </head>
 
@@ -53,7 +53,7 @@
   </div>
 </nav>
 
-	<div class="container criar-perfil">
+	<div class="container profile-form">
 		<h3>Criar Perfil</h3>
 		</br>
 			<form class="form" id="new_profile" action="api/profiles" accept-charset="UTF-8" method="post">
@@ -72,6 +72,15 @@
 				
 			</form>
 	</div>
+	<script>
+	  $(function(){
+        $('.create-profile').on('click', function(e){
+            e.preventDefault();
+            $(this).hide()
+            $(this).next('.profile-form').show();
+        });
+    });
+	</script>
 
 <footer>
     <div class="navbar navbar-default navbar-fixed-bottom">

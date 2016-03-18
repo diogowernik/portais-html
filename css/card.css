@@ -14,6 +14,7 @@
 	font-family: "Lucida Grande", "Helvetica", "Arial", sans-serif;
 	background: #FFFFFF;
 	box-shadow: 1px 1px 1px rgba(0,0,0,.1);
+	
 }
 
 .card-mural {
@@ -21,12 +22,7 @@
 	height: 165px;
 }
 
-.card-name {
-    float:left;
-    margin: 45px 0px 0px 20px;
-    width: 150px;
-    overflow: hidden;
-}
+
 
 .card-menu {
 	float:right;
@@ -50,6 +46,39 @@
     width: 150px;
 }
 
+.card-type {
+    float: left;
+    margin: 25px 0px 0px 30px;
+    width: 150px;
+    overflow: hidden;
+}
+
+.card-name {
+    margin: 20px 89px;
+    width: 150px;
+}
+
+.divider-card {
+    margin-top: 27px;
+    margin-bottom: 9px;
+}
+
+.page-option {
+    font-size: 0.8em;
+    word-spacing: 3px;
+    float: right;
+    
+}
+
+.side-option {
+    font-size: 0.8em;
+    word-spacing: 3px;
+    float: left;
+    
+}
+  
+
+
 .card.new-card {
     color: #CECECE;
     text-align: center;
@@ -62,7 +91,7 @@
 }
 
 .card.new-card > a:hover {
-	color: F2F2F2;
+	color: #F2F2F2;
 	
 }
 
@@ -78,6 +107,42 @@
     padding-top: 25px;
     
 }
+
+.criar-perfil{ display:none; }
+
+.card-flip {
+  width: 280px;
+	height: 165px;
+  perspective: 1000;
+}
+.inside-card {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 1.0s linear;
+}
+.card-flip:hover .inside-card {
+  transform: rotateY(180deg);
+  box-shadow: 0px 0px 0px #aaa;
+}
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.face.back {
+  display: block;
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+  background-color: #FFFFFF;
+  border: 1px solid #CDCDCD;
+  margin: -15px 0px 0px 15px;
+
+}
+
 
 
 @media (min-width: 560px){

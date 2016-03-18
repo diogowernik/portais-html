@@ -4,7 +4,7 @@ $(document).ready(function() {
     
     //make username editable
     $('#username').editable({
-        // showbuttons: false,
+        showbuttons: 'bottom'
     });
     
     //make status editable
@@ -54,8 +54,8 @@ $(document).ready(function() {
     });
     
     $('#quem-sou').editable({
-        inputclass: 'quem-sou-edit'
-        // showbuttons: 'bottom'
+        inputclass: 'quem-sou-edit',
+        showbuttons: 'bottom'
     }); 
 
     

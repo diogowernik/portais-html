@@ -25,7 +25,6 @@
   
   <script src="/html/js/main.js"></script>
   <script src="/html/js/busca.js"></script>
-  <script src="/html/js/create-profile.js"></script>
 	
 </head>
 
@@ -47,14 +46,14 @@
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            <img class="img-circle avatar-small" src="/html/img/gravatar-example.png" alt="Picture" />&nbsp; <span class="caret"></span>
+            <img class="img-circle avatar-small" src="/html/img/gravatar-example.png" alt="Picture" />&nbsp; Diogo Wernik <span class="caret"></span>
           </a>
 
           <ul class="dropdown-menu">
-            <li><a href="#">Painel de Controle</a></a></li>
+            <li><a href="#">Painel de Controle</a></a>
+            </li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">Seus Pagamentos</a></li> 
-            <li role="separator" class="divider"></li>
+            <li><a href="#">Seu plano</a></li> 
             <li><a rel="nofollow" href="#">Sair</a>
             </li>
           </ul>
@@ -71,7 +70,7 @@
             <h3>Minha Conta</h3>
             </br>
           	<p><img class="img-circle avatar-large" src="/html/img/gravatar-example.png" alt="Picture" /></p>
-            <p><a href="#" id="username" data-type="text" data-placement="right" data-title="Digite seu nome">Qual seu nome?</a></p>
+            <p><a href="#" id="username" data-type="text" data-placement="right" data-title="Digite seu nome">Diogo Wernik</a></p>
           </div>
           <div class="dashboard-options">
               <p>Meus Perfis</p>
@@ -82,7 +81,7 @@
 
         <div class="col-md-9">
           
-          <div class="row mural my-profiles-title">
+          <div class="row mural">
             <div class="dashboard-h3">
               <h3>Meus Perfis</h3>  
             </div>
@@ -92,34 +91,63 @@
           </div>
           
           <div class="row mural">
-            <div class="inner-mural">
-
-
-              <a href="" class="create-profile"> 
-                <div class="card card-mural new-card">
-                  <p>Novo</p>
-                  <p><i class="fa fa-plus-circle fa-3x"></i></p>
+            
+            <div class="card card-mural">
+              <div class="card-flip">
+                <div class="inside-card" class="shadow">
+                  <div class="front face">
+                    <img class="img-circle avatar-medium card-image" src="/html/img/estudio-logo2.jpg" alt="Picture" />
+                    <p class="card-name"><strong>Espaço Swaha</strong> </p>
+                  </div>
+                  <div class="back face center">
+                    <p>This is nice for exposing more information about an image.</p>
+                    <p>Any content can go here.</p>
+                  </div>
                 </div>
-              </a>
-              
-                <div class="container criar-perfil">
-                  <br>
-                  <h3>Criar cartão de visitas</h3>
-                  <br>
-                  <form class="form" id="new_profile" action="api/profiles" accept-charset="UTF-8" method="post">
-                    <div class="form-group"><input class="form-control" placeholder="Nome do Perfil" type="string" value="" name="name" id="profile_name" /></div>
-                    <div class="form-group"><textarea class="form-control" placeholder="Escreva um pouco sobre este perfil..." type="string" value="" name="description" id="profile_description"></textarea></div>                
-                  	<div class="form-group"><input type="submit" value="Criar" class="btn btn-primary"></div>
-                  </form>
-                </div> 
-
-
+              </div>
             </div>
+            
+<style type="text/css">
+
+.card-flip {
+  width: 280px;
+	height: 165px;
+  perspective: 1000;
+}
+.inside-card {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 1.0s linear;
+}
+.card-flip:hover .inside-card {
+  transform: rotateY(180deg);
+  box-shadow: -5px 5px 5px #aaa;
+}
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.face.back {
+  display: block;
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  background-color: #aaa;
+
+}
+  
+  
+</style>
+            
           </div>
+          
         </div>
 		</div>
-		
-
 		
 <footer>
     <div class="navbar navbar-default navbar-fixed-bottom">
